@@ -1,0 +1,35 @@
+.console {
+  background-color: black;
+  color: white;
+  font-family: Courier, monospace;
+  width: 100vw; /* Szerokość 100% widoku (cała szerokość ekranu) */
+  height: 100vh; /* Wysokość 100% widoku (cała wysokość ekranu) */
+  padding: 10px;
+  border: 2px solid #00ff00;
+  box-sizing: border-box; /* Uwzględniające wielkość obramowania wewnątrz elementu */
+}
+
+body {
+  overflow: hidden; /* Ukryj pasek przewijania */
+  background-color: black;
+}
+
+/* Styl dla wiersza poleceń */
+.prompt {
+  color: #00ff00;
+}
+
+.input-line {
+  display: flex;
+  align-items: baseline; /* Umieścić pole wejściowe na tej samej linii co prompt */
+}
+
+/* Styl dla pola wprowadzania poleceń */
+input[type="text"] {
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  flex: 1;
+  font-family: Courier, monospace;
+}

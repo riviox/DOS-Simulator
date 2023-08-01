@@ -6,7 +6,7 @@
 </head>
 <body>
   <div class="taskbar">
-    <div class="start-button" id="startButton"></div>
+    <div class="start-button" id="startButton" onclick="toggleStartMenu()"></div>
     <div class="taskbar-icons">
       <!-- Dodaj ikony aplikacji na pasku zadań -->
       <div class="taskbar-icon" onclick="openApp('cmd')"><img src="icons/cmd.png" alt="Command Prompt"></div>
@@ -17,15 +17,24 @@
   </div>
 
   <div id="startMenu" class="start-menu">
-    <!-- Treść menu startowego -->
-    <div class="menu-item">My Computer</div>
-    <div class="menu-item">My Documents</div>
-    <div class="menu-item">Control Panel</div>
-    <div class="menu-item">Logout</div>
+    <div class="start-menu-header">
+      <img src="icons/windows_logo.png" alt="Windows Logo">
+      <div class="start-menu-title">Windows XP</div>
+    </div>
+    <div class="start-menu-content">
+      <!-- Dodaj skróty do aplikacji w Menu Start -->
+      <div class="start-menu-item" onclick="openApp('cmd')">Command Prompt</div>
+      <div class="start-menu-item" onclick="openApp('notepad')">Notepad</div>
+      <div class="start-menu-item" onclick="openApp('calculator')">Calculator</div>
+      <!-- Dodaj więcej skrótów aplikacji tutaj -->
+    </div>
+    <div class="start-menu-footer">
+      <div class="start-menu-user">User</div>
+      <div class="start-menu-shutdown" onclick="shutdown()">Shutdown</div>
+    </div>
   </div>
 
-  <!-- Okno aplikacji Command Prompt -->
-  <div id="cmdApp" class="app-window">
+<div id="cmdApp" class="app-window">
     <div class="app-titlebar">Command Prompt</div>
     <div class="app-content">
       <div id="output"></div>
@@ -36,7 +45,6 @@
     </div>
   </div>
 
-  <!-- Okno aplikacji Notepad -->
   <div id="notepadApp" class="app-window">
     <div class="app-titlebar">Notepad</div>
     <div class="app-content">
@@ -47,7 +55,6 @@
     </div>
   </div>
 
-  <!-- Okno aplikacji Calculator -->
   <div id="calculatorApp" class="app-window">
     <div class="app-titlebar">Calculator</div>
     <div class="app-content">
@@ -71,11 +78,6 @@
         <button onclick="appendOperator('/')">/</button>
         <button onclick="clearDisplay()">C</button>
       </div>
-    </div>
-    <div class="app-footer">
-      <button class="app-button" onclick="closeApp('calculatorApp')">Close</button>
-    </div>
-  </div>
 
   <script src="main.js"></script>
   <script src="cmd.js"></script>

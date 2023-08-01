@@ -48,3 +48,38 @@ function dragWindow(event) {
     appToClose.style.display = 'none';
   }
   
+// ... (reszta kodu)
+
+// Dodaj zmienną przechowującą stan Menu Start
+let isStartMenuOpen = false;
+
+// Funkcja do otwierania i zamykania Menu Start
+function toggleStartMenu() {
+  const startMenu = document.getElementById('startMenu');
+  if (isStartMenuOpen) {
+    startMenu.style.display = 'none';
+  } else {
+    startMenu.style.display = 'block';
+  }
+  isStartMenuOpen = !isStartMenuOpen;
+}
+
+// Obsługa kliknięcia poza Menu Start (zamknięcie Menu Start, gdy użytkownik kliknie poza niego)
+document.addEventListener('click', function(event) {
+  const startMenu = document.getElementById('startMenu');
+  const startButton = document.getElementById('startButton');
+
+  if (!startMenu.contains(event.target) && !startButton.contains(event.target)) {
+    startMenu.style.display = 'none';
+    isStartMenuOpen = false;
+  }
+});
+
+function minimizeApp(appId) {
+  const appToMinimize = document.getElementById(appId);
+  appToMinimize.style.display = 'none';
+}
+
+
+
+

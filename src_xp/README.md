@@ -22,7 +22,7 @@ The Windows XP Simulator is a fun and nostalgic project that emulates the look a
 4. Interact with the applications, customize the desktop, and enjoy the nostalgia!
 
 ## Technologies Used
-
+- ChatGPT :)
 - HTML5 and CSS3 for the user interface layout and design.
 - JavaScript for the interactive elements and application functionalities.
 

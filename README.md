@@ -34,7 +34,7 @@ Contributions to the project are welcome! If you want to enhance the simulator o
 
 ## License
 
-This project is under the [MIT License](link_to_license).
+This project is under the [MIT License](LICENSE).
 
 ## Disclaimer
 

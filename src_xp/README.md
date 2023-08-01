@@ -1,4 +1,5 @@
-# Windows XP Simulator
+# Windows XP Simulator 
+# DISCONTINUED!
 
 ![Windows XP Logo](logo.png)
 

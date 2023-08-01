@@ -6,7 +6,7 @@ DOS Simulator is a simple command-line interface (CLI) simulator of the Disk Ope
 
 ## How to Use?
 
-To run the DOS Simulator, simply open the `index.html` file in any modern web browser. Then, enter your commands in the command line at the bottom of the screen and press Enter to execute them.
+To run the DOS Simulator, simply open the `index.html` file in any modern web browser. Press TAB to start.
 
 ## Available Commands
 

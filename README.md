@@ -1,6 +1,6 @@
 # Windows XP Simulator
 
-![Windows XP Logo](imgs/logo.png)
+
 
 The Windows XP Simulator is a fun and nostalgic project that emulates the look and feel of the classic Windows XP operating system. It provides users with a virtual environment that replicates the iconic desktop, taskbar, and familiar applications of Windows XP.
 

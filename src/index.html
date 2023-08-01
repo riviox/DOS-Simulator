@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Windows XP Simulator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="taskbar">
+    <div class="start-button" id="startButton"></div>
+    <div class="taskbar-icons">
+      <!-- Dodaj ikony aplikacji na pasku zadań -->
+      <div class="taskbar-icon" onclick="openApp('cmd')"><img src="icons/cmd.png" alt="Command Prompt"></div>
+      <div class="taskbar-icon" onclick="openApp('notepad')"><img src="icons/notepad.png" alt="Notepad"></div>
+      <div class="taskbar-icon" onclick="openApp('calculator')"><img src="icons/calculator.png" alt="Calculator"></div>
+      <!-- Dodaj więcej ikon aplikacji tutaj -->
+    </div>
+  </div>
+
+  <div id="startMenu" class="start-menu">
+    <!-- Treść menu startowego -->
+    <div class="menu-item">My Computer</div>
+    <div class="menu-item">My Documents</div>
+    <div class="menu-item">Control Panel</div>
+    <div class="menu-item">Logout</div>
+  </div>
+
+  <!-- Okno aplikacji Command Prompt -->
+  <div id="cmdApp" class="app-window">
+    <div class="app-titlebar">Command Prompt</div>
+    <div class="app-content">
+      <div id="output"></div>
+      <input type="text" id="input" autofocus>
+    </div>
+    <div class="app-footer">
+      <button class="app-button" onclick="closeApp('cmdApp')">Close</button>
+    </div>
+  </div>
+
+  <!-- Okno aplikacji Notepad -->
+  <div id="notepadApp" class="app-window">
+    <div class="app-titlebar">Notepad</div>
+    <div class="app-content">
+      <textarea id="notepadContent" rows="10" cols="50" placeholder="Start typing here..."></textarea>
+    </div>
+    <div class="app-footer">
+      <button class="app-button" onclick="closeApp('notepadApp')">Close</button>
+    </div>
+  </div>
+
+  <!-- Okno aplikacji Calculator -->
+  <div id="calculatorApp" class="app-window">
+    <div class="app-titlebar">Calculator</div>
+    <div class="app-content">
+      <div class="calculator-display" id="calcDisplay">0</div>
+      <div class="calculator-buttons">
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('8')">8</button>
+        <button onclick="appendNumber('9')">9</button>
+        <button onclick="appendOperator('+')">+</button>
+        <button onclick="appendNumber('4')">4</button>
+        <button onclick="appendNumber('5')">5</button>
+        <button onclick="appendNumber('6')">6</button>
+        <button onclick="appendOperator('-')">-</button>
+        <button onclick="appendNumber('1')">1</button>
+        <button onclick="appendNumber('2')">2</button>
+        <button onclick="appendNumber('3')">3</button>
+        <button onclick="appendOperator('*')">*</button>
+        <button onclick="appendNumber('0')">0</button>
+        <button onclick="appendDecimalPoint('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="appendOperator('/')">/</button>
+        <button onclick="clearDisplay()">C</button>
+      </div>
+    </div>
+    <div class="app-footer">
+      <button class="app-button" onclick="closeApp('calculatorApp')">Close</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="cmd.js"></script>
+  <script src="notepad.js"></script>
+  <script src="calculator.js"></script>
+</body>
+</html>
